@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Detection{% endblock title %}
+{% block body %}
+<h1>Upload an Image</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="file" name="image">
+    <button type="submit">Submit</button>
+</form>
+
+{% if predicted_class %}
+<h2>Prediction: {{ predicted_class.0 }}</h2>
+<img src="{{ uploaded_file_url }}" width="300" height="300">
+{% endif %}
+{% endblock body %}
