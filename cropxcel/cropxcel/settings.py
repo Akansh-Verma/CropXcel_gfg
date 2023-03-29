@@ -120,7 +120,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Added manually
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / "static", "static/css", "static/js",
 ]
 
 # Disable caching for development
@@ -130,3 +130,5 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     }
 }
+
+# STATIC_ROOT = 'D:/GithubDesktop/CropXcel_gfg/cropxcel/static'
