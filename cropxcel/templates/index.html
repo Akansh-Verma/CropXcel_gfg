@@ -3,17 +3,22 @@
 {% load static %}
 {% block body %}
 <div class="row legend">
-  <!-- legend introduction text -->
-  <div class="col legend__text">
-    <header class="introText">
-      <h1 class="introText__heading">
-        Shop <span>slightly used </span>furniture <span>&</span> home decors.
-      </h1>
-      <p class="introText__link">
-        <a href="#Visit">Check out our collection
-          <i class="fas fa-arrow-right    "></i></a>
-      </p>
-    </header>
+  <div class="video-container">
+    <video src="/static/videos/cover.mp4" autoplay muted></video>
   </div>
 </div>
+
+{% endblock %}
+{% block content %}
+<section class="slide-in">
+  <h1>Slide In</h1>
+  <div class="grid">
+    <img class="slide-right" src="/static/images/slide1.png">
+    <img class="slide-right" src="/static/images/slide2.png">
+    <img class="slide-right" src="/static/images/slide3.png">
+    <img class="slide-right" src="/static/images/slide4.png">
+  </div>
+
+</section>
+
 {% endblock %}

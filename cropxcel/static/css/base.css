@@ -20,9 +20,6 @@ body {
 body .mainContainer {
   height: 1000px !important;
   padding: 0 8%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(https://res.cloudinary.com/goddy-game/image/upload/v1615409345/background_syp3re.png);
-  background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
   /*Navigation menu section*/
@@ -41,6 +38,7 @@ body .mainContainer .navbar .navbar-brand {
   margin-left: 13%;
   transition: all;
   transition-duration: 1s;
+  z-index: 100;
 }
 body .mainContainer .navbar .navbar-brand:hover,
 body .mainContainer .navbar .navbar-brand:focus {
@@ -50,6 +48,7 @@ body .mainContainer .navbar .navbar-brand:focus {
 }
 body .mainContainer .navbar .navbar-collapse {
   justify-content: flex-end;
+  z-index: 100;
 }
 body .mainContainer .navbar .navbar-collapse .navbar-nav {
   width: 70% !important;
@@ -64,11 +63,24 @@ body .mainContainer .navbar .navbar-collapse .navbar-nav .nav-item {
 }
 body .mainContainer .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #fff;
-  padding: 10px 0x;
+  padding: 10px 0px;
   font-weight: 800;
   transition: all;
   transition-duration: 1s;
 }
+.mainContainer .row .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  bottom: 200px;
+  right: 150px;
+}
+.mainContainer .row .video-container video {
+  width: 1931px;
+  height: 969px;
+  object-fit: cover;
+}
+
 body
   .mainContainer
   .navbar
@@ -128,26 +140,41 @@ body .mainContainer .legend .legend__text .introText .introText__link a:focus {
   text-decoration: none;
   filter: blur(1px);
 }
-body .footer {
-  text-align: center;
-  height: 50px;
-  width: 100%;
-  bottom: 0 !important;
-  background-color: #111;
-  color: #fff;
+
+section {
+  padding: 1em;
+  height: 100vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   justify-content: center;
 }
-body .footer .footer__text a {
-  color: red;
+.slide-in h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem 0;
 }
-body .footer .footer__text a:hover,
-body .footer .footer__text a:focus {
-  text-decoration: none;
+.slide-in .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 10px;
 }
-
+.slide-in img {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 /*Responsiveness for screens*/
+@media screen and (min-width: 1601px) and (max-width: 2500px) {
+  .slide-in .grid {
+    width: 750px;
+  }
+}
 @media screen and (max-width: 1600px) {
   body .mainContainer .navbar .navbar-brand {
     margin-left: 6%;
