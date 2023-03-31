@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -148,11 +150,14 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+.slide-in {
+  margin-top: 50px;
+}
 .slide-in h1 {
-  font-size: 3rem;
+  font-family: 'Italianno', cursive;
+  font-size: 5rem;
   margin: 0;
   color: rgb(0, 0, 0);
-  text-transform: uppercase;
   text-align: center;
   margin: 1rem 0;
 }
@@ -169,6 +174,22 @@ section {
   display: block;
   margin: 0 auto;
 }
+
+.slide-in .text {
+  justify-content: center;
+  align-items: center;
+}
+.slide-in .text .reveal {
+  position: relative;
+  font-family: 'Albert Sans', sans-serif;
+  color: black;
+  font-size: 30px;
+  height: 400px;
+  width: 900px;
+  bottom: 500px;
+  left: 900px;
+}
+
 /*Responsiveness for screens*/
 @media screen and (min-width: 1601px) and (max-width: 2500px) {
   .slide-in .grid {
