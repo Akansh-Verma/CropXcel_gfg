@@ -6,3 +6,7 @@ ScrollReveal().reveal('.slide-right', {
   distance: '400px',
   easing: 'ease-in-out',
 })
+ScrollReveal().reveal('.fade-in', {
+  duration: 5000,
+  move: 0,
+})

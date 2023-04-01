@@ -10,8 +10,7 @@
 
 {% endblock %}
 {% block content %}
-<section class="slide-in">
-  <h1>About Us</h1>
+<section class="slide-in main-grid">
   <div class="grid">
     <img class="slide-right" src="/static/images/slide1.png">
     <img class="slide-right" src="/static/images/slide2.png">
@@ -19,15 +18,42 @@
     <img class="slide-right" src="/static/images/slide4.png">
   </div>
   <div class="text">
+    <h1>About Us</h1>
     <p class="reveal">
       We are a team of passionate individuals dedicated to providing you with
       the best services in the field of agriculture technology. Our mission is to help farmers and agribusinesses
       achieve their goals by providing high-quality solutions that are tailored to their specific needs.
       We pride ourselves on our commitment to excellence and customer satisfaction. Whether you're
       a farmer, researcher, or agribusiness owner, our team is always here to assist you.
-
     </p>
   </div>
 </section>
-
+{% endblock %}
+{% block pagebreak %}
+<section class="pagebreak">
+  <div class="pimage"></div>
+  <div class="ptext">
+    <h2>Crop</h2>
+    <h3>Xcel</h3>
+  </div>
+</section>
+{% endblock%}
+{% block services %}
+<section class="services main-grid">
+  <div class="text">
+    <h1>Our Services</h1>
+    <p class="reveal">
+      Our agriculture technology company offers a range of cutting-edge services to farmers and agribusinesses.
+      Our plant disease detection service uses advanced machine learning algorithms to detect diseases in crops early
+      on, allowing farmers to take action before the disease spreads and causes significant crop damage.
+      Our educational dashboard provides farmers and researchers with access to the latest data and insights on crop
+      yields, weather patterns, and other key agricultural metrics, allowing them to make informed decisions and
+      optimize their operations.
+    </p>
+  </div>
+  <div class="grid">
+    <img class="fade-in" src="/static/images/serv1.png">
+    <img class="fade-in" src="/static/images/serv2.jpg">
+  </div>
+</section>
 {% endblock %}
