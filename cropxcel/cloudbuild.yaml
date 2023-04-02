@@ -27,17 +27,6 @@ steps:
     volumes:
       - name: 'vol-home'
         path: '/builder/home'
-  # Install dependencies
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['submodule', 'update', '--init']
-    id: Git Submodule Update
-  - name: 'gcr.io/agro-379806/conda'
-    entrypoint: 'pip'
-    args: ['install', '-r', 'requirements.txt']
-    id: Install dependencies
-    volumes:
-      - name: 'vol-home'
-        path: '/builder/home'
   # Build and deploy the app
   - name: 'gcr.io/agro-379806/django'
     args: ['python', 'manage.py', 'collectstatic', '--noinput']
