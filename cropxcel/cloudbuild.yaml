@@ -1,32 +1,35 @@
 steps:
   # Install Conda
-  - name: 'gcr.io/cloud-builders/wget'
+  - name: 'gcr.io/cloud-builders/bash:v0.42.2'
+    entrypoint: 'bash'
     args:
-      ['https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh']
-    id: Download Conda
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/Akansh-Verma/CropXcel_gfg.git']
-  - name: 'gcr.io/cloud-builders/bash'
-    args: ['Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/conda']
+      - '-c'
+      - |
+        # Download and install Conda
+        wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+        bash ~/miniconda.sh -b -p $_CUSTOM_HOME/conda
+        export PATH="$_CUSTOM_HOME/conda/bin:$_CUSTOM_PATH"
+        conda init bash
+        source ~/.bashrc
     id: Install Conda
     env:
-      - 'HOME=/builder/home'
-    volumes:
-      - name: 'vol-home'
-        path: '/builder/home'
+      - '_CUSTOM_HOME=/custom/path'
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/Akansh-Verma/CropXcel_gfg.git']
   # Create and activate Conda environment
   - name: 'gcr.io/agro-379806/conda'
     args: ['create', '-n', 'myenv', '--file', 'environment.txt']
     id: Create Conda environment
     volumes:
-      - name: 'vol-home'
-        path: '/builder/home'
+      - name: 'vol-conda'
+        path: '/builder/conda'
   - name: 'gcr.io/agro-379806/conda'
     args: ['activate', 'myenv']
     id: Activate Conda environment
     volumes:
-      - name: 'vol-home'
-        path: '/builder/home'
+      - name: 'vol-conda'
+        path: '/builder/conda'
   # Build and deploy the app
   - name: 'gcr.io/agro-379806/django'
     args: ['python', 'manage.py', 'collectstatic', '--noinput']
@@ -58,7 +61,7 @@ steps:
       - |
         sleep 5m && gcloud compute instances stop instance-1 &
 images: ['gcr.io/agro-379806/django']
-volumes:
-  - name: 'vol-home'
-    path: '/root'
 timeout: 1800s
+substitutions:
+  _CUSTOM_PATH: /custom/path
+  _CUSTOM_HOME: /builder/custom
