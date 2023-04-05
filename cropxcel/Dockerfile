@@ -1,18 +1,21 @@
-FROM continuumio/miniconda3:latest
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim-buster
 
-ENV APP_HOME /app
-WORKDIR $APP_HOME
+# Set the working directory to /app
+WORKDIR /app
 
-# Removes output stream buffering, allowing for more efficient logging
-ENV PYTHONUNBUFFERED 1
+# Copy the requirements file into the container at /app/requirements.txt
+COPY requirements.txt /app/
 
-# Install conda dependencies
-COPY environment.yml .
-RUN conda env create --force -n base -f environment.yml
-RUN echo "conda activate base" >> ~/.bashrc
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy local code to the container image.
-COPY . .
+# Copy the current directory contents into the container at /app
+COPY . /app/
 
-# Activate conda environment and run the web service on container startup. 
-CMD exec bash -c "source ~/.bashrc && gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 mysite.wsgi:application"
+# Expose port 8000 for the Django app
+EXPOSE 8000
+
+# Run the command to start the Django app
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
