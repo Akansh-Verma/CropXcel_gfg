@@ -21,7 +21,7 @@ def detection(request):
 
         # Get prediction
         # predictor = Predict('D:/GithubDesktop/CropXcel_gfg/cropxcel/prediction/CropXcel.h5') #For development
-        predictor = Predict('/app/cropxcel/prediction/CropXcel.h5') #For deploy
+        predictor = Predict('/app/prediction/CropXcel.h5') #For deploy
         predicted_class = predictor.predict(temp_file_path)
         
         
