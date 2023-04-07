@@ -9,6 +9,7 @@ from .models import Image
 
 # Create your views here.
 
+
 def detection(request):
     if request.method == 'POST' and request.FILES['image']:
         # Get uploaded image from request
@@ -18,17 +19,16 @@ def detection(request):
             temp_file.write(image.read())
             temp_file_path = temp_file.name
 
-
         # Get prediction
-        # predictor = Predict('D:/GithubDesktop/CropXcel_gfg/cropxcel/prediction/CropXcel.h5') #For development
-        predictor = Predict('/app/prediction/CropXcel.h5') #For deploy
+        predictor = Predict(
+            'D:/GithubDesktop/CropXcel_gfg/cropxcel/prediction/CropXcel.h5')  # For development
+        # predictor = Predict('/app/prediction/CropXcel.h5') #For deploy
         predicted_class = predictor.predict(temp_file_path)
-        
-        
+
         # Save image
         new_image = Image(image=image)
         new_image.save()
-        
+
         # Render template with results
         context = {
             'predicted_class': predicted_class,
@@ -40,4 +40,3 @@ def detection(request):
     else:
         form = ImageForm()
         return render(request, 'detection.html', {'form': form})
-    
