@@ -58,6 +58,15 @@ In conclusion, CropXcel has proven to be a valuable tool for farmers looking to 
 
 Here are some screenshots of our website -
 
+![a](https://user-images.githubusercontent.com/58855711/232312135-4be16819-22e4-438a-9c4c-68ddf8346d28.png)
+
+![b](https://user-images.githubusercontent.com/58855711/232312176-0a92cc55-73c5-47ed-8e1c-72f60b54e54f.png)
+
+![c](https://user-images.githubusercontent.com/58855711/232312224-eab68115-2eb3-499a-afef-ea73b28d0fe2.png)
+
+![d](https://user-images.githubusercontent.com/58855711/232312268-d5053ae1-2891-4cc5-9beb-0a8c3ea4ec2d.png)
+
+Video link - [Youtube](https://www.youtube.com/watch?v=pJX1ktx8cfw&ab_channel=AkanshVerma)
 ## Getting Started
 
 To get started with CropXcel, you can follow these steps:
