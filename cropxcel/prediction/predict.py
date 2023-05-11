@@ -5,8 +5,10 @@ from keras.utils import load_img, img_to_array
 from PIL import Image
 import matplotlib.pyplot as plt
 
-class_dict = ["Tomato___Tomato_Yellow_Leaf_Curl_Virus", "Tomato___Septoria_leaf_spot", "Tomato___healthy", "Tomato___Late_blight", "Tomato___Tomato_mosaic_virus",
-              "Tomato___Spider_mites Two-spotted_spider_mite", "Tomato___Early_blight", "Tomato___Bacterial_spot", "Tomato___Target_Spot", "Tomato___Leaf_Mold"]
+# class_dict = ["Tomato___Tomato_Yellow_Leaf_Curl_Virus", "Tomato___Septoria_leaf_spot", "Tomato___healthy", "Tomato___Late_blight", "Tomato___Tomato_mosaic_virus",
+              #"Tomato___Spider_mites Two-spotted_spider_mite", "Tomato___Early_blight", "Tomato___Bacterial_spot", "Tomato___Target_Spot", "Tomato___Leaf_Mold"]
+class_dict = ["Tomato___Bacterial_spot", "Tomato___Early_blight", "Tomato___healthy", "Tomato___Late_blight", "Tomato___Leaf_Mold",
+              "Tomato___Septoria_leaf_spot", "Tomato___Spider_mites Two-spotted_spider_mite", "Tomato___Target_Spot", "Tomato___Tomato_mosaic_virus", "Tomato___Tomato_Yellow_Leaf_Curl_Virus"]
 
 
 class Predict:

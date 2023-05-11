@@ -1,59 +1,262 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
 {% load static %}
-{% block body %}
-<div class="row legend">
-  <div class="video-container">
-    <video src="/static/videos/cover.mp4" autoplay muted></video>
+{% block banner %}
+<section class="banner_main">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-12 ">
+           <div class="text-bg">
+              <h1>AGROTECH</h1>
+              <p>Agriculture provides food security and sustains livelihoods for millions of people around the world, while also contributing to economic growth and development.</p>
+              <a href="#">Discover</a>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block boxes %}
+<div class="three_box">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-4">
+           <div class="box_text">
+              <figure><img src="/static/images/img1.jpg" alt="#"/></figure>
+           </div>
+        </div>
+        <div class="col-md-4">
+           <div class="box_text">
+              <figure><img src="/static/images/img2.jpg" alt="#"/></figure>
+           </div>
+        </div>
+        <div class="col-md-4">
+           <div class="box_text">
+              <figure><img src="/static/images/img3.jpg" alt="#"/></figure>
+           </div>
+        </div>
+     </div>
   </div>
 </div>
+{% endblock %}
 
-{% endblock %}
-{% block content %}
-<section class="slide-in main-grid">
-  <div class="grid">
-    <img class="slide-right" src="/static/images/slide1.png">
-    <img class="slide-right" src="/static/images/slide2.png">
-    <img class="slide-right" src="/static/images/slide3.png">
-    <img class="slide-right" src="/static/images/slide4.png">
+{% block aboutus %}
+<div  class="hottest">
+  <div class="container">
+     <div class="row d_flex">
+        <div class="col-md-5">
+           <div class="titlepage">
+              <h2>World’s Hottest Destinations <br>for Vegans</h2>
+           </div>
+        </div>
+        <div class="col-md-7">
+           <div class="hottest_box">
+              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined </p>
+           </div>
+        </div>
+     </div>
   </div>
-  <div class="text">
-    <h1>About Us</h1>
-    <p class="reveal">
-      We are a team of passionate individuals dedicated to providing you with
-      the best services in the field of agriculture technology. Our mission is to help farmers and agribusinesses
-      achieve their goals by providing high-quality solutions that are tailored to their specific needs.
-      We pride ourselves on our commitment to excellence and customer satisfaction. Whether you're
-      a farmer, researcher, or agribusiness owner, our team is always here to assist you.
-    </p>
-  </div>
-</section>
-{% endblock %}
-{% block pagebreak %}
-<section class="pagebreak">
-  <div class="pimage"></div>
-  <div class="ptext">
-    <h2>Crop</h2>
-    <h3>Xcel</h3>
-  </div>
-</section>
+</div>
 {% endblock%}
-{% block services %}
-<section class="services main-grid">
-  <div class="text">
-    <h1>Our Services</h1>
-    <p class="reveal">
-      Our agriculture technology company offers a range of cutting-edge services to farmers and agribusinesses.
-      Our plant disease detection service uses advanced machine learning algorithms to detect diseases in crops early
-      on, allowing farmers to take action before the disease spreads and causes significant crop damage.
-      Our educational dashboard provides farmers and researchers with access to the latest data and insights on crop
-      yields, weather patterns, and other key agricultural metrics, allowing them to make informed decisions and
-      optimize their operations.
-    </p>
+
+{% block chooseus %}
+<div class="choose ">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-8">
+           <div class="titlepage">
+              <h2>Why Choose Us? </h2>
+              <p>there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined  </p>
+           </div>
+        </div>
+     </div>
   </div>
-  <div class="grid">
-    <img class="fade-in" src="/static/images/serv1.png">
-    <img class="fade-in" src="/static/images/serv2.jpg">
+  <div class="container-fluid">
+     <div class="row d_flex">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+           <div class="padding_with">
+              <div class="row">
+                 <div class="col-md-6 padding_bottom">
+                    <div class="choose_box">
+                       <i><img src="/static/images/icon1.png" alt="#"/></i>
+                       <div class="choose_text">
+                          <h3>Excellent Service</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 padding_bottom">
+                    <div class="choose_box">
+                       <i><img src="/static/images/icon2.png" alt="#"/></i>
+                       <div class="choose_text">
+                          <h3>Clean Working</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 padding_bottom2">
+                    <div class="choose_box">
+                       <i><img src="/static/images/icon3.png" alt="#"/></i>
+                       <div class="choose_text">
+                          <h3>Quality And Reliability</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="choose_box">
+                       <i><img src="/static/images/icon4.png" alt="#"/></i>
+                       <div class="choose_text">
+                          <h3>Expert Farmer</h3>
+                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+           <div class="choose_img">
+              <figure><img src="/static/images/food.jpg" alt="#"/></figure>
+           </div>
+        </div>
+     </div>
   </div>
-</section>
-{% endblock %}
+  <div class="container">
+     <div class="row">
+        <div class="col-md-5">
+           <a class="read_more" href="#">Read More</a>
+        </div>
+     </div>
+  </div>
+</div>
+{% endblock%}
+
+{% block products %}
+<div class="product">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-6">
+           <div class="titlepage">
+              <h2>Our Product</h2>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="container-fluid">
+     <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_left0">
+           <div class="product_box">
+              <figure><img src="/static/images/product1.jpg" alt="#"/></figure>
+              <h3 class="black">vegetable</h3>
+           </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+           <div class="product_box">
+              <figure><img src="/static/images/product2.jpg" alt="#"/></figure>
+              <h3 >weat</h3>
+           </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_right0">
+           <div class="product_box">
+              <figure><img src="/static/images/product3.jpg" alt="#"/></figure>
+              <h3>fruit</h3>
+           </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 padding_left0">
+           <div class="product_box">
+              <figure><img src="/static/images/product4.jpg" alt="#"/></figure>
+              <h3>sunflowere</h3>
+           </div>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 padding_right0">
+           <div class="product_box">
+              <figure><img src="/static/images/product5.jpg" alt="#"/></figure>
+              <h3>Livestock</h3>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+{% endblock%}
+
+{% block carousel %}
+<div class="about">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+           <div class="titlepage">
+              <h2>People Says About Farm</h2>
+           </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-12">
+           <div id="myCarousel" class="carousel slide about_Carousel " data-ride="carousel">
+              <ol class="carousel-indicators">
+                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#myCarousel" data-slide-to="1"></li>
+                 <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                 <div class="carousel-item active">
+                    <div class="container">
+                       <div class="carousel-caption ">
+                          <div class="row">
+                             <div class="col-md-12">
+                                <div class="test_box">
+                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
+                                   <h4>jhone Du</h4>
+                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="container">
+                       <div class="carousel-caption">
+                          <div class="row">
+                             <div class="col-md-12">
+                                <div class="test_box">
+                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
+                                   <h4>jhone Du</h4>
+                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="container">
+                       <div class="carousel-caption">
+                          <div class="row">
+                             <div class="col-md-12">
+                                <div class="test_box">
+                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
+                                   <h4>jhone Du</h4>
+                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+              </a>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+{% endblock%}

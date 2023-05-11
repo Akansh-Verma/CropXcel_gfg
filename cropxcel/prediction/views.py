@@ -20,8 +20,7 @@ def detection(request):
             temp_file_path = temp_file.name
 
         # Get prediction
-        predictor = Predict(
-            'D:/GithubDesktop/CropXcel_gfg/cropxcel/prediction/CropXcel.h5')
+        predictor = Predict('./prediction/CropXcel.h5')
 
         # For deploy
         # predictor = Predict('cropxcel/prediction/CropXcel.h5')
