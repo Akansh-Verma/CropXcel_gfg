@@ -1,31 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Detection{% endblock title %}
 {% load static %}
-{% block body %}
-<div class="row legend">
-    <!-- legend introduction text -->
-    <div class="photo-container">
-        <img src="/static/images/det-cover.png" alt="">
-    </div>
-    <div class="col legend__text">
-        <header class="introText">
-            <h1 class="introText__heading">
-                Guide <span>to using </span>Leaf Detection
-            </h1>
-            <p class="introText__link">
-                <a href="#Visit">Check directly
-                    <i class="fas fa-arrow-right"></i></a>
-            </p>
-        </header>
-    </div>
-</div>
+{% block detcss %}
+<link rel="stylesheet" href="/static/css/detection.css?{% now " u"="" %}"="" />
 {% endblock %}
-{% block content %}
-<section class="detect main-grid">
+{% block detection %}
+<!-- <section class="detect main-grid">
 
     <div class="data">
         <h1 class="heading">Upload an Image</h1>
-        <form class="form" method="POST" enctype="multipart/form-data">
+        <form class="form" method="POST" enctype="multipart/form-data" id="det-form">
             {% csrf_token %}
             {{ form.as_p }}
             <span class="form-title">Upload your file</span>
@@ -50,5 +34,55 @@
         <img src="{{ uploaded_file_url }}" width="300" height="300">
         {% endif %}
     </div>
-</section>
+</section> -->
+{% endblock %}
+
+{% block Detservices %} 
+<section class="c-section">
+    <h2 class="c-section__title"><span>Our Services</span></h2>
+    <ul class="c-services">
+      <li class="c-services__item">
+        <h3>Organic Gardening Tips to Grow an Incredible Organic Garden</h3>
+        <p><a href="https://www.allaboutgardening.com/organic-gardening-tips/">In this article, organic gardening specialist Logan Hailey outlines her 11 favorite tips to make sure you start off planting on the right foot.</a></p>
+      </li>
+      <li class="c-services__item">
+        <h3>How to Identify, Treat and Prevent Them</h3>
+        <p><a href="https://www.allaboutgardening.com/tomato-diseases/">In this article, gardening expert and former organic farmer Logan Hailey examines the most common diseases that will likely strike your tomatoes, as well as how to identify, treat, and prevent them from striking your tomato plants.</a></p>
+      </li>
+      <li class="c-services__item">
+        <h3>Select a leaf to determine the disease</h3>
+        <p><a href="#det-form">Click Here to follow the process of disease detection</a></p>
+      </li>
+      <li class="c-services__item">
+        <h3>How to manage your garden after too much rain</h3>
+        <p><a href="https://www.farmanddairy.com/top-stories/how-to-manage-your-garden-after-too-much-rain/267001.html">Rain is a good thing, especially when it comes to growing plants, but too much rain can ruin a garden.</a></p>
+      </li>
+      <li class="c-services__item">
+        <h3>Easy Steps to Create Gardens in Your Yard for the First Time</h3>
+        <p><a href="https://www.bhg.com/gardening/yard/garden-care/ten-steps-to-beginning-a-garden/">Easy Steps to Create Gardens in Your Yard for the First Time.</a></p>
+      </li>
+    </ul>
+    <h2 class="upload__title"><span class="upload-text">Upload Image</span>
+    </h2>
+    <div class="form-container">
+      <form method="POST" enctype="multipart/form-data" id="det-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="file-input" class="label-container">
+            <input type="file" accept="image/*" name="image" required="" id="file-input">
+        </label>
+        <button class="cssbuttons-io-button" type="submit"> Submit
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+          </div>
+        </button>
+    </form>
+    </div>
+    <div class="output">
+    {% if predicted_class %}
+    <h1 class="heading">Prediction: {{ predicted_class.0 }}</h1>
+    <img src="{{ uploaded_file_url }}" width="300" height="300">
+    {% endif %}
+    </div>
+  </section>
 {% endblock %}

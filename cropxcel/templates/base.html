@@ -18,7 +18,7 @@
 
   <!-- style css -->
   <link rel="stylesheet" href="/static/css/base.css?{% now " u"="" %}"="" />
-
+  {% block icss %}{% endblock %}
   <!-- Responsive-->
   <link rel="stylesheet" href="/static/css/responsive.css">
 
@@ -31,7 +31,11 @@
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-  
+
+  <!-- Detection page Css file -->
+  <!-- <link rel="stylesheet" href="/static/css/detection.css?{% now " u"="" %}"="" /> -->
+  {% block detcss %}{% endblock %}
+
   <title>{% block title %} {% endblock title %} | CropXcel</title>
 </head>
 
@@ -64,19 +68,19 @@
                    <div class="collapse navbar-collapse" id="navbarsExample04">
                       <ul class="navbar-nav mr-auto">
                          <li class="nav-item active">
-                            <a class="nav-link" href="index.html"> Home  </a>
+                            <a class="nav-link" href="{% url 'home' %}"> Home  </a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#about">About</a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="products.html">Services </a>
+                            <a class="nav-link" href="#services">Services </a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="#blog">Blog</a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                          </li>
                          <!-- <li class="nav-item d_none">
                             <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -112,6 +116,12 @@
   {% block carousel %}
   {% endblock%}
 
+  {% block Detservices %}
+  {% endblock%}
+
+  {% block detection %}
+  {% endblock%}
+
   {% block footer %}
   <footer id="contact">
     <div class="footer">
@@ -123,7 +133,7 @@
                 </div>
              </div>
              <div class="col-md-12">
-                <form id="request" class="main_form">
+                <form id="request" class="main_form" action="https://formcarry.com/s/RutE05OJuU" method="POST" accept-charset="UTF-8">
                    <div class="row">
                       <div class="col-md-3 ">
                          <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
@@ -136,7 +146,7 @@
                       </div>
                       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                          <ul class="social_icon">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://github.com/Akansh-Verma/CropXcel_gfg"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -151,14 +161,14 @@
                    </div>
                 </form>
              </div>
-             <div class="col-md-3 border_right">
+             <!-- <div class="col-md-3 border_right">
                 <ul class="location_icon">
                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Locatins</li>
                    <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +71 9087654321</li>
                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
                 </ul>
-             </div>
-             <div class="col-md-3 border_right">
+             </div> -->
+             <!-- <div class="col-md-3 border_right">
                 <h3>Useful Link</h3>
                 <ul class="link">
                    <li><a href="#">humour, or </a></li>
@@ -167,8 +177,8 @@
                    <li><a href="#">even slightly  </a> </li>
                    <li><a href="#">believable. If   </a></li>
                 </ul>
-             </div>
-             <div class="col-md-3 border_right">
+             </div> -->
+             <!-- <div class="col-md-3 border_right">
                 <h3>Menus</h3>
                 <ul class="link">
                   <li><a href="index.html">Home</a></li>                             
@@ -177,14 +187,14 @@
                   <li><a href="blog.html">Blog</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
-             </div>
-             <div class="col-md-3">
+             </div> -->
+             <!-- <div class="col-md-3">
                 <form class="bottom_form">
                    <h3>Newsletter</h3>
                    <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
                    <button class="sub_btn">subscribe</button>
                 </form>
-             </div>
+             </div> -->
           </div>
        </div>
        <div class="copyright">

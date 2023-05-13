@@ -26,6 +26,7 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
+
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
 * {
@@ -668,6 +669,7 @@ ul.btn li:last-child {
 /** end choose  section **/
 
 
+
 /** product  section **/
 
 .product_box {
@@ -1030,3 +1032,18 @@ ul.link li a::after {
      margin-top: 70px;
 }
 
+.about .row .carousel .carousel-inner .test_box .blog-image1 {
+     height: 450px;
+     width: 400px;
+     border-radius: 30px;
+}
+
+.about .row .carousel .carousel-inner .test_box .blog-image2 {
+     height: 450px;
+     width: 400px;
+     border-radius: 30px;
+}
+
+.about .row .carousel .carousel-inner .test_box .blog-image3 {
+     border-radius: 30px;
+}

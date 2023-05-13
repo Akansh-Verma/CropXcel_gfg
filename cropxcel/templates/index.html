@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
 {% load static %}
+{% block icss %}
+<link rel="stylesheet" href="/static/css/base.css?{% now " u"="" %}"="" />
+{% endblock %}
 {% block banner %}
 <section class="banner_main">
   <div class="container">
      <div class="row">
         <div class="col-md-12 ">
            <div class="text-bg">
-              <h1>AGROTECH</h1>
+              <h1>CROPXCEL</h1>
               <p>Agriculture provides food security and sustains livelihoods for millions of people around the world, while also contributing to economic growth and development.</p>
-              <a href="#">Discover</a>
+              <a href="#services">Discover</a>
            </div>
         </div>
      </div>
@@ -23,17 +26,17 @@
      <div class="row">
         <div class="col-md-4">
            <div class="box_text">
-              <figure><img src="/static/images/img1.jpg" alt="#"/></figure>
+              <figure><img src="/static/images/image_1.jpg" alt="#"/></figure>
            </div>
         </div>
         <div class="col-md-4">
            <div class="box_text">
-              <figure><img src="/static/images/img2.jpg" alt="#"/></figure>
+              <figure><img src="/static/images/image_2.jpg" alt="#"/></figure>
            </div>
         </div>
         <div class="col-md-4">
            <div class="box_text">
-              <figure><img src="/static/images/img3.jpg" alt="#"/></figure>
+              <figure><img src="/static/images/image_5.jpg" alt="#"/></figure>
            </div>
         </div>
      </div>
@@ -42,17 +45,17 @@
 {% endblock %}
 
 {% block aboutus %}
-<div  class="hottest">
+<div  class="hottest" id="about">
   <div class="container">
      <div class="row d_flex">
         <div class="col-md-5">
            <div class="titlepage">
-              <h2>World’s Hottest Destinations <br>for Vegans</h2>
+              <h2>About</h2>
            </div>
         </div>
         <div class="col-md-7">
            <div class="hottest_box">
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined </p>
+              <p>Plant disease detection using VGG16 is an AI-powered technology that uses the VGG16 convolutional neural network (CNN) to detect signs of disease in plants. This technology is becoming increasingly popular in the agricultural industry as a reliable and efficient method of detecting diseases in plants.The VGG16 model is a deep learning algorithm that is trained on large datasets of plant images to recognize patterns associated with different types of plant diseases. Once trained, the VGG16 model can analyze plant images and accurately identify the presence of specific diseases, such as blight, powdery mildew, or rust.The benefits of using the VGG16 model for plant disease detection are numerous. The technology is highly accurate, with a low false-positive rate, meaning that it can identify even subtle signs of disease that may be missed by human observers. It is also fast and scalable, enabling large volumes of plant images to be analyzed quickly and efficiently.</p>
            </div>
         </div>
      </div>
@@ -61,80 +64,80 @@
 {% endblock%}
 
 {% block chooseus %}
-<div class="choose ">
-  <div class="container">
-     <div class="row">
-        <div class="col-md-8">
-           <div class="titlepage">
-              <h2>Why Choose Us? </h2>
-              <p>there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined  </p>
-           </div>
-        </div>
-     </div>
-  </div>
-  <div class="container-fluid">
-     <div class="row d_flex">
-        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-           <div class="padding_with">
-              <div class="row">
-                 <div class="col-md-6 padding_bottom">
-                    <div class="choose_box">
-                       <i><img src="/static/images/icon1.png" alt="#"/></i>
-                       <div class="choose_text">
-                          <h3>Excellent Service</h3>
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6 padding_bottom">
-                    <div class="choose_box">
-                       <i><img src="/static/images/icon2.png" alt="#"/></i>
-                       <div class="choose_text">
-                          <h3>Clean Working</h3>
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6 padding_bottom2">
-                    <div class="choose_box">
-                       <i><img src="/static/images/icon3.png" alt="#"/></i>
-                       <div class="choose_text">
-                          <h3>Quality And Reliability</h3>
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="col-md-6">
-                    <div class="choose_box">
-                       <i><img src="/static/images/icon4.png" alt="#"/></i>
-                       <div class="choose_text">
-                          <h3>Expert Farmer</h3>
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a</p>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-           <div class="choose_img">
-              <figure><img src="/static/images/food.jpg" alt="#"/></figure>
-           </div>
-        </div>
-     </div>
-  </div>
-  <div class="container">
-     <div class="row">
-        <div class="col-md-5">
-           <a class="read_more" href="#">Read More</a>
-        </div>
-     </div>
-  </div>
+<div class="choose " id="services">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+            <div class="titlepage">
+               <h2>Why Choose AI for Agriculture? </h2>
+               <p></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid">
+      <div class="row d_flex">
+         <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+            <div class="padding_with">
+               <div class="row">
+                  <div class="col-md-6 padding_bottom">
+                     <div class="choose_box">
+                        <i><img src="/static/images/icon1.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Early detection</h3>
+                           <p>AI algorithms can analyze large amounts of plant images and data to detect signs of disease at an early stage, before symptoms become visible to the human eye.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 padding_bottom">
+                     <div class="choose_box">
+                        <i><img src="/static/images/icon2.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Accuracy</h3>
+                           <p>AI-powered image recognition software can accurately identify even subtle signs of disease that may be missed by human observers.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 padding_bottom2">
+                     <div class="choose_box">
+                        <i><img src="/static/images/icon3.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Speed</h3>
+                           <p>AI-powered plant disease detection can process large volumes of data much faster than human experts, enabling farmers to respond quickly and effectively to disease outbreaks.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="choose_box">
+                        <i><img src="/static/images/icon4.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Cost-effective</h3>
+                           <p>AI-powered plant disease detection can be less expensive than traditional methods, such as lab-based analysis or manual inspections by trained experts.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+            <div class="choose_img">
+               <figure><img src="/static/images/drones.jpg" alt="#"/></figure>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-5">
+            <a class="read_more" href="{% url 'detection' %}">Try out our Service</a>
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock%}
 
 {% block products %}
-<div class="product">
+<!-- <div class="product">
   <div class="container">
      <div class="row">
         <div class="col-md-6">
@@ -178,85 +181,85 @@
         </div>
      </div>
   </div>
-</div>
+</div> -->
 {% endblock%}
 
 {% block carousel %}
-<div class="about">
-  <div class="container">
-     <div class="row">
-        <div class="col-md-12">
-           <div class="titlepage">
-              <h2>People Says About Farm</h2>
-           </div>
-        </div>
-     </div>
-     <div class="row">
-        <div class="col-md-12">
-           <div id="myCarousel" class="carousel slide about_Carousel " data-ride="carousel">
-              <ol class="carousel-indicators">
-                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                 <li data-target="#myCarousel" data-slide-to="1"></li>
-                 <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                 <div class="carousel-item active">
-                    <div class="container">
-                       <div class="carousel-caption ">
-                          <div class="row">
-                             <div class="col-md-12">
-                                <div class="test_box">
-                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
-                                   <h4>jhone Du</h4>
-                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="carousel-item">
-                    <div class="container">
-                       <div class="carousel-caption">
-                          <div class="row">
-                             <div class="col-md-12">
-                                <div class="test_box">
-                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
-                                   <h4>jhone Du</h4>
-                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-                 <div class="carousel-item">
-                    <div class="container">
-                       <div class="carousel-caption">
-                          <div class="row">
-                             <div class="col-md-12">
-                                <div class="test_box">
-                                   <i><img src="/static/images/tes1.png" alt="#"/></i>
-                                   <h4>jhone Du</h4>
-                                   <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-              </a>
-           </div>
-        </div>
-     </div>
-  </div>
+<div class="about" id="blog">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>Why Indian farmers are harnessing emerging technologies to sustainably increase productivity?</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide about_Carousel " data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption ">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="/static/images/ai_1.jpg" alt="#" class="blog-image1"/></i>
+                                    <!-- <h4>jhone Du</h4> -->
+                                    <p>Indian farmers are harnessing emerging technologies to sustainably increase productivity for a number of reasons. One key factor is the growing population and increasing demand for food, which is putting pressure on farmers to produce more food with limited resources. At the same time, farmers are facing challenges such as climate change, water scarcity, and soil degradation, which are threatening the long-term sustainability of agriculture.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="/static/images/ai_2.jpg" alt="#" class="blog-image2"/></i>
+                                    <!-- <h4>jhone Du</h4> -->
+                                    <p>Emerging technologies such as AI, machine learning, and precision farming offer solutions to these challenges by enabling farmers to optimize resource use, reduce waste, and improve crop yields. For example, precision farming technologies can help farmers to apply water and nutrients more efficiently, reducing water waste and fertilizer runoff. AI-powered tools can also help farmers to detect plant diseases early, reducing crop losses and the need for chemical inputs.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="/static/images/ai_5.jpg" alt="#" class="blog-image3"/></i>
+                                    <!-- <h4>jhone Du</h4> -->
+                                    <p>With improving productivity and sustainability, emerging technologies also offer economic benefits for farmers. By reducing input costs and improving crop yields, these technologies can help farmers to increase their profits and improve their livelihoods. This is particularly important for small-scale farmers, who often face financial constraints and limited access to resources.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock%}
